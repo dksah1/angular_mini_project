@@ -1,0 +1,45 @@
+<!-- @if(type===1){
+    
+    <h1>hello 1</h1>
+}
+@else{
+    
+    <h1>hello 2</h1>
+} -->
+
+<!-- 
+@switch (type) {
+@case(1){
+
+    <h1>Hello World! type is 1 </h1>
+}
+@case(2){
+    <h1>hello 2</h1>
+}
+@default {
+    <p>default hello</p>
+}
+
+} -->
+
+<!-- @for (item of types; track $index){
+
+    <h2>hello {{item}}</h2>
+} -->
+
+<div class="p-8 mt-4">
+    <div class="flex mb-4 ">
+        <app-search (search)="onSearch($event)"></app-search>
+    </div>
+    <div class="flex flex-wrap">
+     
+     @for(item of filteredProduct; track $index ){
+        <div class="w-4/12 pr-2 mb-2 rounded shadow ">
+            <app-product-card [product]="item" (viewProduct)="onViewProduct($event)"></app-product-card>
+         </div>
+    
+     }
+
+    </div>
+</div>
+
