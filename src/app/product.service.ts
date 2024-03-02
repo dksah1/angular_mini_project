@@ -17,4 +17,7 @@ export class ProductService {
     return this.httpClient.get<Product>("http://localhost:3000/products/"+id)
 
   }
+  addProduct(product : Product){
+    return this.httpClient.post<Product>("http://localhost:3000/products/",product)
+  }
 }

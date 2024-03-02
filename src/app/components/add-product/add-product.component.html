@@ -1,10 +1,11 @@
 <div class="p-8 mt-8 flex justify-center">
 <form class="shadow border-2 rounded-md w-6/12 p-4">
     <div class="flex flex-col">
-      <mat-form-field class="w-full">
+      <mat-form-field class="w-full" (ngSubmit)="addProduct()">
         <input 
         matInput
         name="name"
+        [(ngModel)]="product.name"
         placeholder="Enter product name"
         type="text">
       </mat-form-field>
@@ -12,6 +13,7 @@
         <input 
         matInput
         name="description"
+        [(ngModel)]="product.description"
         placeholder="Enter description"
         type="text">
       </mat-form-field>
@@ -19,6 +21,8 @@
         <input 
         matInput
         name="price"
+        [(ngModel)]="product.price"
+
         placeholder="Enter the price of the product"
         type="text">
       </mat-form-field>
@@ -26,6 +30,8 @@
         <input 
         matInput
         name="category"
+        [(ngModel)]="product.category"
+
         placeholder="Enter the category"
         type="text">
       </mat-form-field>
@@ -33,19 +39,13 @@
         <input 
         matInput
         name="imageUrl"
+        [(ngModel)]="product.imageUrl"
         placeholder="Enter the imageUrl"
-        type="text">
-      </mat-form-field>
-      <mat-form-field class="w-full">
-        <input 
-        matInput
-        name="discount"
-        placeholder=""
         type="text">
       </mat-form-field>
     </div>
     <div class="flex justify-center">
-        <button mat-raised-button color="primary">Add</button>
+        <button type="submit" mat-raised-button color="primary">Add</button>
     </div>
 </form>
 </div>
