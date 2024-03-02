@@ -3,11 +3,14 @@
   subscriptSizing="dynamic"
    appearance="outline"
    >
-    <input matInput placeholder="Search..." 
-    (keypress)="onTyping($event)"
-    (change)="inputChange($event)"
-    class="text-white"
+
+    <input matInput 
+    name="search"
+    [(ngModel)]="text"
+    placeholder="Search..." 
+ 
     />
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="onSearch() ">Search</button>
+  <button mat-raised-button color="accent" routerLink="/add-product"  >Add product</button>
 </div>

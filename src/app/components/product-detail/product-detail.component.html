@@ -1,0 +1,19 @@
+<div class=" flex items-center justify-center max-h-screen ">
+    <mat-card class="shadow min-h-full w-4/12  ">
+        <img mat-card-image
+        class="h-[300px] "
+        [src] = "product.imageUrl">
+       
+        <div class="p-4"> 
+        <h1>{{product.name}}</h1>
+        <h2>{{product.category}}</h2>
+        <div class="flex gap-2">
+            <span>{{product.price}}</span>
+            <span><s>Rs. 2000</s></span>
+            <span>(50%) off </span>
+        </div>
+        <h2>Description:</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident vero non voluptate voluptatem iste autem nam quasi quos tenetur nulla sunt corporis tempora consequatur quam, voluptatibus architecto in aperiam? Consequatur?</p>
+    </div>
+    </mat-card>
+</div>
